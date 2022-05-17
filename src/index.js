@@ -6,7 +6,7 @@ const CONFIG = require("./config/config");
 const start = async () => {
   try {
     await connectDatabase();
-    app.listen(CONFIG.port, () => {
+    app.listen(CONFIG.port || 4000, () => {
       console.log(`Server connected to the port ${CONFIG.port}`);
     });
   } catch (error) {
