@@ -121,6 +121,7 @@ async function updateUser(req, res) {
     console.log("B");
     const user = await UserModel.findOne({ publicKey: publicKey });
 
+    
     //TODO [ 2 ]
     console.log("C");
     if (!user) {
