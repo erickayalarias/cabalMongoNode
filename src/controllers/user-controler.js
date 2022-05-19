@@ -28,6 +28,7 @@ async function signup(req, res) {
       publicKey: publicKey,
       password: password,
       avatar: avatar,
+      images:[0, 0, 0]
     });
     //TODO [ 4 ]
     return res.status(201).json(sendResponse(newUser));
