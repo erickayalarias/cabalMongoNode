@@ -69,9 +69,17 @@ const UserSchema = new mongoose.Schema(
         ],
         images: [
             {
-                type: Number,
-                default: [0, 0, 0],
-            },
+            type: Number,
+            default: 0,
+          },
+            {
+            type: Number,
+            default: 0,
+          },
+            {
+            type: Number,
+            default: 0,
+          }
         ],
         chat: [
             {
