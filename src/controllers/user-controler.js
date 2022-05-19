@@ -130,10 +130,10 @@ async function updateUser(req, res) {
       { $set: data }
     );
 
-    console.log("usuario sin actualizar", updateUsers);
+    // console.log("usuario sin actualizar", updateUsers);
     
     const userresult = await UserModel.findOne({ publicKey: publicKey });
-    console.log("esto es lo que te envio", userresult);
+    // console.log("esto es lo que te envio", userresult);
     
     //TODO [ 4 ]
     return res.json(sendResponse(userresult));
