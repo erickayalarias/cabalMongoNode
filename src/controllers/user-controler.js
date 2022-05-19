@@ -125,7 +125,7 @@ async function updateUser(req, res) {
       { _id: user._id },
       { $set: data }
     );
-
+      console.log(data)
     const userresult = await UserModel.findOne({ publicKey: publicKey });
 
     //TODO [ 4 ]
