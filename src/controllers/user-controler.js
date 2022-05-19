@@ -114,7 +114,7 @@ async function getUser(req, res) {
 async function updateUser(req, res) {
   //TODO [ R ]
   const { publicKey, data } = req.body;
-  console.log("bodyrequest", req.body);
+  console.log("publicKey", publicKey );
   try {
     //TODO [ 1 ]
     const user = await UserModel.findOne({ publicKey: publicKey });
