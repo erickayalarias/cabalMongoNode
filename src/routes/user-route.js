@@ -14,7 +14,7 @@ const UserRouter = Router();
 UserRouter.post("/checkPublicKey", checkPublicKey);
 UserRouter.post("/login", login);
 UserRouter.post("/finduser", getUser);
-UserRouter.patch("/users", verifyPermissionApi, updateUser);
+UserRouter.patch("/users", updateUser);
 UserRouter.route("/signup").post(signup);
 
 module.exports = UserRouter;

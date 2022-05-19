@@ -115,28 +115,30 @@ async function getUser(req, res) {
 async function updateUser(req, res) {
   //TODO [ R ]
   const { publicKey, data } = req.body;
-  console.log("publicKey", publicKey );
+  console.log("A");
   try {
     //TODO [ 1 ]
-
+    console.log("B");
     const user = await UserModel.findOne({ publicKey: publicKey });
 
     //TODO [ 2 ]
+    console.log("C");
     if (!user) {
       return res.json(sendError('This public Key do not exist'));
     }
 
     //TODO [ 3 ]
+    console.log("D");
     const updateUsers = await UserModel.updateOne(
       { _id: user._id },
       { $set: data }
     );
 
     // console.log("usuario sin actualizar", updateUsers);
-    
+    console.log("E");
     const userresult = await UserModel.findOne({ publicKey: publicKey });
     // console.log("esto es lo que te envio", userresult);
-    
+    console.log("F");
     //TODO [ 4 ]
     return res.json(sendResponse(userresult));
   } catch (error) {
