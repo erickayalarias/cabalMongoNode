@@ -125,12 +125,12 @@ async function updateUser(req, res) {
     }
 
     //TODO [ 3 ]
-    const updateUser = await UserModel.updateOne(
+    const updateUsers = await UserModel.updateOne(
       { _id: user._id },
       { $set: data }
     );
 
-    console.log("usuario sin actualizar", updateUser);
+    console.log("usuario sin actualizar", updateUsers);
     
     const userresult = await UserModel.findOne({ publicKey: publicKey });
     console.log("esto es lo que te envio", userresult);
