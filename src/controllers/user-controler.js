@@ -110,6 +110,7 @@ async function getUser(req, res) {
 async function updateUser(req, res) {
   //TODO [ R ]
   const { publicKey, data } = req.body;
+  console.log("bodyrequest", req.body);
 
   try {
     //TODO [ 1 ]
@@ -125,14 +126,13 @@ async function updateUser(req, res) {
       { _id: user._id },
       { $set: data }
     );
-    console.log(data)
-    
+      console.log("usuario sin actualizar", updateUser);
     const userresult = await UserModel.findOne({ publicKey: publicKey });
-
+      console.log("esto es lo que te envio", userresult);
     //TODO [ 4 ]
     return res.json(sendResponse(userresult));
   } catch (error) {
-    res.status(500).json(sendError());
+    return res.status(500).json(sendError());
   }
 }
 
