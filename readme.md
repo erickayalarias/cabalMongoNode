@@ -63,3 +63,10 @@ You can now access the server at http://localhost:3000
 - `.postman` - All created paths are located in the file inside the postman folder.
 
 ***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
+
+## Authors
+
+* **Garikoitz Herrero Vargas** - [GariHV](https://github.com/GariHV)
+* **Roger Puigdemassa I Armengol** - [regi46](https://github.com/regi46)
+* **Erick Ayala Arias** - [erickayalaris](https://github.com/erickayalaris)
+* **Jefferson Vouga Bertinoti** [Bertinoti](https://github.com/Bertinoti)
